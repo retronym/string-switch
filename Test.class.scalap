@@ -1,0 +1,4 @@
+class Test extends scala.AnyRef {
+  def this() = { /* compiled code */ }
+  def test(s: scala.Predef.String, expected: scala.Int): scala.Int = { /* compiled code */ }
+}

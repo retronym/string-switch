@@ -1,84 +1,90 @@
-// class version 58.65535 (-65478)
-// access flags 0x20
-class Test {
+// class version 52.0 (52)
+// access flags 0x21
+public class Test {
 
 
-  // access flags 0x0
-  <init>()V
+  // access flags 0x1
+  public <init>()V
     ALOAD 0
     INVOKESPECIAL java/lang/Object.<init> ()V
     RETURN
     MAXSTACK = 1
     MAXLOCALS = 1
 
-  // access flags 0x0
-  test(Ljava/lang/String;)I
+  // access flags 0x1
+  public test(Ljava/lang/String;I)I
+    // parameter final  s
+    // parameter final  expected
     ALOAD 1
-    ASTORE 2
-    ICONST_M1
-    ISTORE 3
-    ALOAD 2
-    INVOKEVIRTUAL java/lang/String.hashCode ()I
-    LOOKUPSWITCH
-      2236: L0
-      3840: L1
-      2031744: L2
-      default: L3
-   L2
-    ALOAD 2
-    LDC "BBBB"
-    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
-    IFEQ L4
-    ICONST_1
-    ISTORE 3
-    GOTO L3
-   L4
-    ALOAD 2
-    LDC "AaAa"
-    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
-    IFEQ L3
+    ASTORE 4
+    ALOAD 4
+    IFNONNULL L0
     ICONST_0
-    ISTORE 3
-    GOTO L3
+    GOTO L1
    L0
-    ALOAD 2
-    LDC "Ea"
-    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
-    IFEQ L3
-    ICONST_2
-    ISTORE 3
-    GOTO L3
+    ALOAD 4
+    INVOKEVIRTUAL java/lang/String.hashCode ()I
    L1
-    ALOAD 2
-    LDC "xx"
+    LOOKUPSWITCH
+      2236: L2
+      3840: L3
+      2031744: L4
+      default: L5
+   L2
+    LDC "Ea"
+    ALOAD 4
     INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
-    IFEQ L3
-    ICONST_3
-    ISTORE 3
-   L3
-    ILOAD 3
-    TABLESWITCH
-      0: L5
-      1: L6
-      2: L7
-      3: L8
-      default: L9
-   L5
-    ICONST_1
-    GOTO L10
+    IFEQ L6
+    GOTO L7
    L6
-    ICONST_2
-    GOTO L10
-   L7
-    ICONST_3
-    GOTO L10
-   L8
-    ICONST_4
+    GOTO L8
+   L3
+    LDC "xx"
+    ALOAD 4
+    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
+    IFEQ L9
     GOTO L10
    L9
-    ICONST_5
+    GOTO L8
+   L4
+    LDC "BBBB"
+    ALOAD 4
+    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
+    IFEQ L11
+    GOTO L12
+   L11
+    LDC "AaAa"
+    ALOAD 4
+    INVOKEVIRTUAL java/lang/String.equals (Ljava/lang/Object;)Z
+    IFEQ L13
+    GOTO L14
+   L13
+    GOTO L8
+   L5
+    GOTO L8
+   L14
+    ICONST_1
+    ISTORE 3
+    GOTO L15
+   L12
+    ICONST_2
+    ISTORE 3
+    GOTO L15
+   L7
+    ICONST_3
+    ISTORE 3
+    GOTO L15
    L10
+    ICONST_4
+    ISTORE 3
+    GOTO L15
+   L8
+    ICONST_5
+    ISTORE 3
+    GOTO L15
+   L15
+    ILOAD 3
     IRETURN
     MAXSTACK = 2
-    MAXLOCALS = 4
+    MAXLOCALS = 5
 }
